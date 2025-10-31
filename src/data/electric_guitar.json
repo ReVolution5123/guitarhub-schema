@@ -1,0 +1,197 @@
+{
+  "leftHanded": {
+    "type": "boolean",
+    "description": "Defines if the guitar is for a left-handed player"
+  },
+  "body": {
+    "type": "enum",
+    "values": [
+      "sharp-v",
+      "sharp-v-2",
+      "st",
+      "te",
+      "x"
+    ],
+    "description": "Guitar body model type (updated dynamically from .glb)"
+  },
+  "bridge": {
+    "type": "enum",
+    "values": [
+      "fixed",
+      "tremolo",
+      "tune-o-matic"
+    ],
+    "description": "Bridge model type (updated dynamically from .glb)"
+  },
+  "neck": {
+    "type": "enum",
+    "values": [
+      "st",
+      "te"
+    ],
+    "description": "Neck model type (updated dynamically from .glb)"
+  },
+  "bodyColor": {
+    "type": "string",
+    "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+    "description": "Main body color in HEX format"
+  },
+  "pickguard": {
+    "type": "boolean",
+    "description": "Enables or disables the pickguard"
+  },
+  "pickguardColor": {
+    "type": "string",
+    "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+    "description": "Pickguard color in HEX format"
+  },
+  "metalColor": {
+    "type": "string",
+    "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+    "description": "Hardware metal color in HEX format"
+  },
+  "plasticColor": {
+    "type": "string",
+    "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+    "description": "Plastic components color in HEX format"
+  },
+  "secondToneEnabled": {
+    "type": "boolean",
+    "description": "Enables or disables a secondary tone circuit"
+  },
+  "bodyMaterial": {
+    "type": "enum",
+    "values": [
+      "gloss",
+      "satin",
+      "matte",
+      "metallic"
+    ],
+    "description": "Body surface finish type"
+  },
+  "bodyPaint": {
+    "type": "object",
+    "properties": {
+      "mode": {
+        "type": "enum",
+        "values": [
+          "solid",
+          "linear",
+          "radial"
+        ],
+        "description": "Paint or gradient mode"
+      },
+      "plane": {
+        "type": "enum",
+        "values": [
+          "xy",
+          "yz",
+          "xz"
+        ],
+        "description": "Projection plane for gradient"
+      },
+      "angleDeg": {
+        "type": "number",
+        "min": 0,
+        "max": 360,
+        "description": "Gradient rotation angle"
+      },
+      "power": {
+        "type": "number",
+        "min": 0,
+        "max": 1,
+        "description": "Gradient intensity"
+      },
+      "smooth": {
+        "type": "number",
+        "min": 0,
+        "max": 1,
+        "description": "Gradient smoothness"
+      },
+      "stops": {
+        "type": "array",
+        "items": {
+          "pos": {
+            "type": "number",
+            "min": 0,
+            "max": 1
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+            "description": "Gradient stop color in HEX format"
+          }
+        },
+        "description": "Gradient color stops"
+      }
+    },
+    "description": "Body paint and gradient configuration"
+  },
+  "firstPickup": {
+    "type": "enum",
+    "values": [
+      "humbucker",
+      "railway",
+      "single",
+      "none"
+    ],
+    "description": "Pickup type for neck position"
+  },
+  "secondPickup": {
+    "type": "enum",
+    "values": [
+      "humbucker",
+      "railway",
+      "single",
+      "none"
+    ],
+    "description": "Pickup type for middle position"
+  },
+  "thirdPickup": {
+    "type": "enum",
+    "values": [
+      "humbucker",
+      "railway",
+      "single",
+      "none"
+    ],
+    "description": "Pickup type for bridge position"
+  },
+  "pickupMetalColor": {
+    "type": "string",
+    "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+    "description": "Pickup metal color in HEX format"
+  },
+  "neckTree": {
+    "type": "enum",
+    "values": [
+      "maple", "walnut"
+    ],
+    "description": "Neck wood type (static)"
+  },
+  "fretboardTree": {
+    "type": "enum",
+    "values": [
+      "maple", "ebony", "laurel"
+    ],
+    "description": "Fretboard wood type (static)"
+  },
+  "neckFinish": {
+    "type": "enum",
+    "values": [
+      "raw",
+      "satin",
+      "gloss"
+    ],
+    "description": "Neck surface finish"
+  },
+  "fretboardFinish": {
+    "type": "enum",
+    "values": [
+      "raw",
+      "satin",
+      "gloss"
+    ],
+    "description": "Fretboard surface finish"
+  }
+}
