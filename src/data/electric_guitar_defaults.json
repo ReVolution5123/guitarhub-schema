@@ -1,0 +1,34 @@
+{
+  "leftHanded": true,
+  "body": "st",
+  "bridge": "fixed",
+  "neck": "st",
+  "bodyColor": "#FFFFFF",
+  "pickguard": true,
+  "pickguardColor": "#FFFFFF",
+  "metalColor": "#FFFFFF",
+  "plasticColor": "#FFFFFF",
+  "secondToneEnabled": true,
+  "bodyMaterial": "gloss",
+  "bodyPaint": {
+    "mode": "solid",
+    "plane": "xy",
+    "angleDeg": 0,
+    "power": 1,
+    "smooth": 1,
+    "stops": [
+      {
+        "pos": 0,
+        "color": "#FFFFFF"
+      }
+    ]
+  },
+  "firstPickup": "single",
+  "secondPickup": "single",
+  "thirdPickup": "single",
+  "pickupMetalColor": "#FFFFFF",
+  "neckTree": "maple",
+  "fretboardTree": "maple",
+  "neckFinish": "raw",
+  "fretboardFinish": "raw"
+}

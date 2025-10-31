@@ -6,10 +6,10 @@
   "body": {
     "type": "enum",
     "values": [
-      "sharp-v",
-      "sharp-v-2",
       "st",
       "te",
+      "sharp-v",
+      "sharp-v-2",
       "x"
     ],
     "description": "Guitar body model type (updated dynamically from .glb)"
@@ -130,9 +130,9 @@
   "firstPickup": {
     "type": "enum",
     "values": [
+      "single",
       "humbucker",
       "railway",
-      "single",
       "none"
     ],
     "description": "Pickup type for neck position"
@@ -140,9 +140,9 @@
   "secondPickup": {
     "type": "enum",
     "values": [
+      "single",
       "humbucker",
       "railway",
-      "single",
       "none"
     ],
     "description": "Pickup type for middle position"
@@ -150,9 +150,9 @@
   "thirdPickup": {
     "type": "enum",
     "values": [
+      "single",
       "humbucker",
       "railway",
-      "single",
       "none"
     ],
     "description": "Pickup type for bridge position"
@@ -165,14 +165,17 @@
   "neckTree": {
     "type": "enum",
     "values": [
-      "maple", "walnut"
+      "maple",
+      "walnut"
     ],
     "description": "Neck wood type (static)"
   },
   "fretboardTree": {
     "type": "enum",
     "values": [
-      "maple", "ebony", "laurel"
+      "maple",
+      "ebony",
+      "laurel"
     ],
     "description": "Fretboard wood type (static)"
   },
