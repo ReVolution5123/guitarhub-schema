@@ -2,15 +2,12 @@ import os
 import json
 import re
 
-
 class SchemaService:
     BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     JSON_PATH = os.path.join(BASE_DIR, "src", "data", "electric_guitar.json")
     DEFAULTS_PATH = os.path.join(BASE_DIR, "src", "data", "electric_guitar_defaults.json")
 
     def __init__(self):
-        print(f"[DEBUG] BASE_DIR: {self.BASE_DIR}")
-        print(f"[DEBUG] JSON_PATH: {self.JSON_PATH}")
         self.data = self.load_schema()
         self.defaults = self.load_defaults()
 
@@ -30,13 +27,11 @@ class SchemaService:
 
     def load_defaults(self):
         if not os.path.exists(self.DEFAULTS_PATH):
-            print(f"[WARN] Defaults file not found: {self.DEFAULTS_PATH}")
-            return {}
+            raise FileNotFoundError(f"Defaults file not found: {self.DEFAULTS_PATH}")
 
         try:
             with open(self.DEFAULTS_PATH, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                print(f"[INFO] Defaults loaded successfully ({len(data)} fields)")
                 return data
         except json.JSONDecodeError as e:
             raise ValueError(f"Failed to parse defaults JSON: {e}\nPath: {self.DEFAULTS_PATH}")

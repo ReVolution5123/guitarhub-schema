@@ -5,8 +5,8 @@ from fastapi import APIRouter
 from src.services.schema_service import SchemaService
 
 router = APIRouter(
-    prefix="/schema",
-    tags=["schema"],
+    prefix="/schemas",
+    tags=["schemas"],
 )
 
 @router.get("/", summary="Get default schema")

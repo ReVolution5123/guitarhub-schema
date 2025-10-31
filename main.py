@@ -1,7 +1,10 @@
 from fastapi import FastAPI
-from src.routers import schema, defaults
+from src.routers import schemas, defaults, files
 
 app = FastAPI(title="GuitarHub schema & models API")
-app.include_router(schema.router)
-app.include_router(defaults.router)
+
+routers = [ defaults.router, files.router, schemas.router, ]
+for router in routers:
+    app.include_router(router)
+
 
